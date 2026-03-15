@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Γιώργος - Αλέξανδρος Δεληγιάννης | Ψυχολόγος & Δραματοθεραπευτής</title>
+    <meta name="description" content="Ο Γιώργος - Αλέξανδρος Δεληγιάννης, αδειούχος Ψυχολόγος και Δραματοθεραπευτής στο Μαρούσι, προσφέρει έναν ασφαλή χώρο για εσωτερική έκφραση και επούλωση.">
+    <meta name="author" content="Advon Media">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" href="https://github.com/agelmet/DELIGIANNIS/blob/main/logdl.jpg?raw=true" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        theme: {
+                            base: '#fdf6e6',
+                            light: '#fdfdfd',
+                            mid: '#f7f3ed',
+                            dark: '#f4f3f1',
+                            text: '#2c2925',     // Deep warm grey/charcoal for text
+                            accent: '#5a4f46',   // Muted earthy taupe for subtle accents
+                            button: '#1a1918'    // Almost black for buttons to create strong contrast
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -15px rgba(0,0,0,0.03)',
+                        'float': '0 30px 60px -20px rgba(44,41,37,0.15)',
+                    },
+                    animation: {
+                        'float': 'float 8s ease-in-out infinite',
+                        'line-drop': 'lineDrop 12s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        lineDrop: {
+                            '0%': { transform: 'translateY(-100%)', opacity: '0' },
+                            '10%': { opacity: '1' },
+                            '90%': { opacity: '1' },
+                            '100%': { transform: 'translateY(100vh)', opacity: '0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Minimal Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fdfdfd; }
+        ::-webkit-scrollbar-thumb { background: #dcd7d2; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #5a4f46; }
+
+        body { background-color: #fdf6e6; color: #2c2925; }
+
+        /* Typography & Utility Fixes */
+        .no-accents { text-transform: uppercase; }
+        .text-balance { text-wrap: balance; }
+
+        /* Cinematic Reveal Animations */
+        .reveal { opacity: 0; transform: translateY(50px) scale(0.98); transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0) scale(1); }
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+
+        /* Elegant Image Wrap */
+        .img-wrap {
+            overflow: hidden;
+            border-radius: 2rem;
+            position: relative;
+        }
+        .img-wrap img {
+            transition: transform 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            will-change: transform;
+        }
+        .img-wrap:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Ambient Animated Lines Background */
+        .ambient-lines { position: fixed; inset: 0; pointer-events: none; z-index: -1; overflow: hidden; opacity: 0.4; }
+        .line { position: absolute; width: 1px; height: 150px; background: linear-gradient(to bottom, transparent, rgba(90, 79, 70, 0.15), transparent); }
+        .line:nth-child(1) { left: 15%; animation-delay: 0s; animation-duration: 10s; }
+        .line:nth-child(2) { left: 45%; animation-delay: 4s; animation-duration: 14s; }
+        .line:nth-child(3) { left: 75%; animation-delay: 2s; animation-duration: 12s; }
+
+        /* Glassmorphism Navigation */
+        .glass-nav {
+            background: rgba(253, 246, 230, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans antialiased selection:bg-theme-accent selection:text-white">
+
+    <div class="ambient-lines">
+        <div class="line animate-line-drop"></div>
+        <div class="line animate-line-drop"></div>
+        <div class="line animate-line-drop"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 transition-all duration-500 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <a href="#" class="relative group block">
+                <div class="absolute -inset-2 bg-white rounded-full opacity-0 group-hover:opacity-40 transition-opacity blur-md"></div>
+                <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/logdl.jpg?raw=true" alt="Γιώργος - Αλέξανδρος Δεληγιάννης Logo" class="relative h-16 w-16 object-cover rounded-full shadow-lg border-2 border-white transition-transform duration-500 group-hover:scale-105 group-hover:shadow-xl">
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="#philosophy" class="text-sm font-medium tracking-wide text-theme-text hover:text-theme-accent transition-colors">Η ΦΙΛΟΣΟΦΙΑ</a>
+                <a href="#services" class="text-sm font-medium tracking-wide text-theme-text hover:text-theme-accent transition-colors">ΥΠΗΡΕΣΙΕΣ</a>
+                <a href="#approach" class="text-sm font-medium tracking-wide text-theme-text hover:text-theme-accent transition-colors">ΠΡΟΣΕΓΓΙΣΗ</a>
+                <a href="#contact" class="px-7 py-3 bg-theme-button text-white rounded-full text-sm font-semibold tracking-wide hover:bg-theme-accent hover:shadow-float transition-all duration-300">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
+            </div>
+
+            <button class="md:hidden text-theme-text focus:outline-none" id="mobile-menu-btn">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-theme-light shadow-xl hidden flex-col items-center py-10 space-y-8 border-t border-theme-dark">
+            <a href="#philosophy" class="text-lg font-medium mobile-link">Η ΦΙΛΟΣΟΦΙΑ</a>
+            <a href="#services" class="text-lg font-medium mobile-link">ΥΠΗΡΕΣΙΕΣ</a>
+            <a href="#approach" class="text-lg font-medium mobile-link">ΠΡΟΣΕΓΓΙΣΗ</a>
+            <a href="#contact" class="px-8 py-4 bg-theme-button text-white rounded-full text-lg font-medium mobile-link shadow-lg">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-[100vh] flex items-center pt-32 pb-20 px-6 overflow-hidden bg-theme-base">
+        <div class="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-white blur-[100px] opacity-60"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-theme-mid blur-[120px] opacity-80"></div>
+
+        <div class="max-w-5xl mx-auto w-full relative z-10 text-center">
+            <div class="reveal">
+                <span class="inline-block py-1 px-4 rounded-full bg-white border border-theme-dark text-xs font-bold tracking-[0.2em] text-theme-accent mb-8 shadow-sm">
+                    ΨΥΧΟΛΟΓΟΣ & ΔΡΑΜΑΤΟΘΕΡΑΠΕΥΤΗΣ
+                </span>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.1] mb-8 text-balance">
+                    Η Τέχνη της <br>
+                    <span class="italic text-theme-accent font-light">Εσωτερικής Έκφρασης</span>
+                </h1>
+                <p class="text-lg md:text-xl text-theme-text/70 mb-12 max-w-2xl mx-auto leading-relaxed text-balance">
+                    Όταν οι λέξεις δεν αρκούν, η τέχνη αναλαμβάνει τον λόγο. Ένας ασφαλής και δημιουργικός χώρος στο Μαρούσι, όπου η κλασική ψυχοθεραπεία συναντά τη θεραπευτική δύναμη της έκφρασης.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="#contact" class="px-10 py-5 bg-theme-button text-white rounded-full text-sm font-semibold tracking-widest hover:bg-theme-accent transition-all duration-300 shadow-float w-full sm:w-auto flex items-center justify-center gap-3 group">
+                        ΞΕΚΙΝΗΣΤΕ ΤΟ ΤΑΞΙΔΙ 
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="py-32 px-6 bg-theme-light relative">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+            
+            <div class="lg:col-span-5 relative reveal">
+                <div class="img-wrap shadow-float animate-float bg-white p-3">
+                    <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/IMG_9665.jpeg?raw=true" alt="Γιώργος - Αλέξανδρος Δεληγιάννης" class="w-full h-auto rounded-[1.5rem] object-cover object-center aspect-[4/5]">
+                </div>
+                <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-theme-mid rounded-full z-[-1]"></div>
+            </div>
+
+            <div class="lg:col-span-7 reveal delay-200">
+                <span class="text-theme-accent font-bold tracking-widest text-xs uppercase mb-4 block">ΓΝΩΡΙΣΤΕ ΤΟΝ ΘΕΡΑΠΕΥΤΗ</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-theme-text mb-8 leading-tight">Ο Γιώργος - Αλέξανδρος Δεληγιάννης</h2>
+                
+                <div class="space-y-6 text-lg text-theme-text/80 font-light leading-relaxed">
+                    <p>
+                        Αδειούχος Ψυχολόγος (Αρ. Αδείας: 1138075) με έδρα το ιδιωτικό του γραφείο στο Μαρούσι. Η ακαδημαϊκή του πορεία χαρακτηρίζεται από διεθνή πρότυπα αριστείας, όντας πτυχιούχος Ψυχολογίας με ανώτατη διάκριση (<strong>Cum Laude</strong>) από το Deree - Αμερικανικό Κολλέγιο Ελλάδος, και κάτοχος πτυχίου Ψυχολογίας (Second Class Honours) από το Open University της Μεγάλης Βρετανίας.
+                    </p>
+                    <p>
+                        Αναζητώντας εργαλεία πέρα από την παραδοσιακή «θεραπεία μέσω συζήτησης», εξειδικεύτηκε στη Δραματοθεραπεία μέσω μεταπτυχιακών σπουδών στο καταξιωμένο Κέντρο <strong>«Το Έρμα»</strong>. 
+                    </p>
+                    <p>
+                        Η κλινική του εμπειρία είναι βαθιά. Έχει εργαστεί σε ιδιαίτερα απαιτητικά πλαίσια, όπως η Ψυχιατρική Κλινική του <strong>414 Στρατιωτικού Νοσοκομείου</strong> (ΣΝΕΝ) και το <strong>80ο Τάγμα Υγειονομικού Εθνοφυλακής</strong>. Παράλληλα, έχει πολύτιμη τριβή στην υποστήριξη παιδιών και εφήβων (παράλληλη στήριξη σε παιδιά με ΔΕΠΥ, The Ranch).
+                    </p>
+                    <blockquote class="border-l-[3px] border-theme-accent pl-6 py-2 my-8 text-2xl font-serif text-theme-text italic">
+                        "Στόχος μου είναι να σας βοηθήσω να «παίξετε» με νέους ρόλους, να εκφράσετε τα μπλοκαρισμένα συναισθήματα και να ανακαλύψετε τις δικές σας, αυθεντικές λύσεις."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 px-6 bg-theme-mid relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-theme-accent font-bold tracking-widest text-xs uppercase block mb-4">ΕΞΕΙΔΙΚΕΥΜΕΝΕΣ ΠΑΡΟΧΕΣ</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-theme-text">Υπηρεσίες Υποστήριξης</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-[2rem] p-10 lg:p-12 shadow-sm hover:shadow-float transition-all duration-500 group reveal">
+                    <div class="w-16 h-16 rounded-full bg-theme-base flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="user" class="w-7 h-7 text-theme-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold mb-4 text-theme-text">Ατομική Ψυχολογική Υποστήριξη</h3>
+                    <p class="text-theme-text/70 mb-6 leading-relaxed font-light">
+                        Ένα σταθερό, μη-επικριτικό πλαίσιο για την επεξεργασία του άγχους, των δυσκολιών προσαρμογής και των διαπροσωπικών προκλήσεων. Εστιάζουμε στην προσωπική σας ιστορία για να βελτιώσουμε την ποιότητα της ζωής σας.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-semibold px-4 py-2 bg-theme-dark rounded-full text-theme-text">Ενήλικες</span>
+                        <span class="text-xs font-semibold px-4 py-2 bg-theme-dark rounded-full text-theme-text">Συνεδρία 50'</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[2rem] p-10 lg:p-12 shadow-sm hover:shadow-float transition-all duration-500 group reveal delay-100">
+                    <div class="w-16 h-16 rounded-full bg-theme-base flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="palette" class="w-7 h-7 text-theme-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold mb-4 text-theme-text">Δραματοθεραπεία & Εκφραστικές Τέχνες</h3>
+                    <p class="text-theme-text/70 mb-6 leading-relaxed font-light">
+                        Ισχυρά βιωματικά εργαλεία (ζωγραφική, αφήγηση, παιχνίδι ρόλων) που παρακάμπτουν τις λογικές «άμυνες». Δείτε τα προβλήματα από νέα οπτική και προβάρετε νέες συμπεριφορές. Δεν απαιτείται καλλιτεχνικό ταλέντο.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-semibold px-4 py-2 bg-theme-dark rounded-full text-theme-text">Βιωματικό</span>
+                        <span class="text-xs font-semibold px-4 py-2 bg-theme-dark rounded-full text-theme-text">Συνεδρία 50'</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[2rem] p-10 lg:p-12 shadow-sm hover:shadow-float transition-all duration-500 group reveal">
+                    <div class="w-16 h-16 rounded-full bg-theme-base flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="users" class="w-7 h-7 text-theme-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold mb-4 text-theme-text">Ομαδικά Βιωματικά Εργαστήρια</h3>
+                    <p class="text-theme-text/70 mb-6 leading-relaxed font-light">
+                        Η ομάδα ως μικρόκοσμος. Μέσα από ασκήσεις δραματοθεραπείας, ενισχύουμε την αλληλεπίδραση. Μοιραστείτε εμπειρίες, αναπτύξτε ενσυναίσθηση και αντλήστε δύναμη από τη συλλογική δυναμική.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-semibold px-4 py-2 bg-theme-dark rounded-full text-theme-text">Ομάδες</span>
+                        <span class="text-xs font-semibold px-4 py-2 bg-theme-dark rounded-full text-theme-text">Συνεδρία 90'</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[2rem] p-10 lg:p-12 shadow-sm hover:shadow-float transition-all duration-500 group reveal delay-100">
+                    <div class="w-16 h-16 rounded-full bg-theme-base flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="laptop" class="w-7 h-7 text-theme-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif font-semibold mb-4 text-theme-text">Διαδικτυακή Ψυχοθεραπεία</h3>
+                    <p class="text-theme-text/70 mb-6 leading-relaxed font-light">
+                        Σταθερή ψυχολογική υποστήριξη από την άνεση του χώρου σας. Ιδανικό για όσους κατοικούν στην επαρχία, στο εξωτερικό, ή δυσκολεύονται να μετακινηθούν στο φυσικό μας γραφείο στο Μαρούσι.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-semibold px-4 py-2 bg-theme-dark rounded-full text-theme-text">Online / Video</span>
+                        <span class="text-xs font-semibold px-4 py-2 bg-theme-dark rounded-full text-theme-text">Συνεδρία 50'</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="py-32 px-6 bg-theme-light border-y border-theme-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20 reveal md:w-2/3">
+                <span class="text-theme-accent font-bold tracking-widest text-xs uppercase block mb-4">ΘΕΜΕΛΙΑ ΕΜΠΙΣΤΟΣΥΝΗΣ</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-theme-text mb-6">Τι Κάνει την Προσέγγισή μου να Ξεχωρίζει</h2>
+                <p class="text-theme-text/70 text-lg font-light leading-relaxed">Μια θεραπευτική ταυτότητα χτισμένη στην καινοτομία, την κλινική τριβή, την ακαδημαϊκή αριστεία και τη βαθιά ανθρώπινη κατανόηση.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+                
+                <div class="reveal">
+                    <div class="mb-6 flex">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-theme-accent"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-theme-text mb-3">Η Καινοτομία της Δραματοθεραπείας</h4>
+                    <p class="text-theme-text/70 text-sm font-light leading-relaxed">
+                        Η εκπαίδευσή μου μού επιτρέπει να χρησιμοποιώ τη δημιουργικότητα ως εργαλείο ίασης, ιδανικά για όσους νιώθουν «μπλοκαρισμένοι» στην κλασική ανάλυση.
+                    </p>
+                </div>
+
+                <div class="reveal delay-100">
+                    <div class="mb-6 flex">
+                        <i data-lucide="shield" class="w-8 h-8 text-theme-accent"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-theme-text mb-3">Ισχυρό Κλινικό Υπόβαθρο</h4>
+                    <p class="text-theme-text/70 text-sm font-light leading-relaxed">
+                        Η εργασία μου στο 414 ΣΝΕΝ και στο 80ο ΤΥΕΘ με έφερε αντιμέτωπο με σύνθετα περιστατικά, σφυρηλατώντας θεραπευτική ανθεκτικότητα και ψυχραιμία.
+                    </p>
+                </div>
+
+                <div class="reveal delay-200">
+                    <div class="mb-6 flex">
+                        <i data-lucide="award" class="w-8 h-8 text-theme-accent"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-theme-text mb-3">Ακαδημαϊκή Αριστεία</h4>
+                    <p class="text-theme-text/70 text-sm font-light leading-relaxed">
+                        Σπουδές σε Deree & Open University UK με τιμητικές διακρίσεις (Cum Laude). Μια εγγύηση για τη στιβαρή και σύγχρονη επιστημονική μου κατάρτιση.
+                    </p>
+                </div>
+
+                <div class="reveal delay-300">
+                    <div class="mb-6 flex">
+                        <i data-lucide="heart-handshake" class="w-8 h-8 text-theme-accent"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-theme-text mb-3">Πολυεπίπεδη Ενσυναίσθηση</h4>
+                    <p class="text-theme-text/70 text-sm font-light leading-relaxed">
+                        Από παιδιά με ΔΕΠΥ έως ενήλικες, έχω μάθει να «ακούω» προσεκτικά και να προσαρμόζομαι στις μοναδικές ανάγκες κάθε ηλικίας και ιδιοσυγκρασίας.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-theme-base pt-32 pb-12 relative overflow-hidden">
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="bg-white rounded-[3rem] p-12 lg:p-20 shadow-float mb-20 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-[60%] h-full bg-theme-mid/30 rounded-l-[50%] z-0"></div>
+
+                <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-serif text-theme-text mb-6">Επικοινωνία & Ραντεβού</h2>
+                        <p class="text-theme-text/70 mb-10 text-lg font-light leading-relaxed">
+                            Η επούλωση ξεκινά με ένα βήμα. Επικοινωνήστε μαζί μου για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής και ασφάλειας.
+                        </p>
+                        
+                        <a href="https://www.doctoranytime.gr/d/Psychologos/deligiannis-giorgos-aleksandros" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-theme-button text-white px-8 py-4 rounded-full font-semibold tracking-wide hover:bg-theme-accent hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                            ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ ΜΕΣΩ 
+                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-4 ml-3 filter brightness-0 invert">
+                        </a>
+                    </div>
+
+                    <div class="space-y-8 bg-theme-base/50 backdrop-blur-sm p-8 rounded-3xl border border-white">
+                        <div>
+                            <span class="text-xs font-bold tracking-widest uppercase text-theme-accent block mb-2">ΔΙΕΥΘΥΝΣΗ ΓΡΑΦΕΙΟΥ</span>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-theme-text mt-1"></i>
+                                <span class="text-theme-text font-medium text-lg">Συγγρού 48, Μαρούσι, Αττική</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="text-xs font-bold tracking-widest uppercase text-theme-accent block mb-2">ΤΗΛΕΦΩΝΟ</span>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="phone" class="w-5 h-5 text-theme-text"></i>
+                                <a href="tel:2107114392" class="text-theme-text font-medium text-lg hover:text-theme-accent transition-colors">210 711 4392</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="text-xs font-bold tracking-widest uppercase text-theme-accent block mb-2">ΩΡΑΡΙΟ ΛΕΙΤΟΥΡΓΙΑΣ</span>
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="clock" class="w-5 h-5 text-theme-text"></i>
+                                <span class="text-theme-text font-medium">ΔΕΥΤΕΡΑ - ΣΑΒΒΑΤΟ <br><span class="text-theme-accent text-sm">ΚΑΤΟΠΙΝ ΡΑΝΤΕΒΟΥ</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-theme-dark pt-8">
+                
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/texni_kai_therapeia/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-theme-text hover:bg-theme-button hover:text-white shadow-sm transition-all duration-300">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/georgios-alexandros-deligiannis-5b3101382/?originalSubdomain=gr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-theme-text hover:bg-theme-button hover:text-white shadow-sm transition-all duration-300">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-theme-text/60 text-sm mb-1">© 2026 Γιώργος - Αλέξανδρος Δεληγιάννης. Όλα τα δικαιώματα διατηρούνται.</p>
+                    <p class="text-theme-text/60 text-sm">
+                        Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener" class="text-theme-text font-bold hover:text-theme-accent transition-colors">Advon Media</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Initialize Icons
+        lucide.createIcons();
+
+        // 2. Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // 3. Navbar Scroll Effect (Glassmorphism)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'shadow-sm');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2', 'shadow-sm');
+            }
+        });
+
+        // 4. Scroll Reveal Animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
