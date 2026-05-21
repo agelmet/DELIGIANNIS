@@ -7,14 +7,18 @@
     <title>Γιώργος - Αλέξανδρος Δεληγιάννης | Ψυχολόγος (Εξειδίκευση στη Δραματοθεραπεία)</title>
     <meta name="description" content="Ο Γιώργος - Αλέξανδρος Δεληγιάννης, αδειούχος Ψυχολόγος που εξειδικεύεται στη δραματοθεραπεία, προσφέρει στο Μαρούσι έναν ασφαλή χώρο για εσωτερική έκφραση.">
     
+    <!-- Favicon -->
     <link rel="icon" href="https://github.com/agelmet/DELIGIANNIS/blob/main/logdl.jpg?raw=true" type="image/jpeg">
 
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
@@ -146,6 +150,19 @@
             transform: rotate(45deg);
         }
 
+        /* Gallery Hover Effects */
+        .gallery-img-wrapper {
+            overflow: hidden;
+            border-radius: 1.5rem;
+            position: relative;
+        }
+        .gallery-img-wrapper img {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .gallery-img-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
         /* Styled Map Filter */
         .styled-map {
             filter: grayscale(80%) sepia(30%) hue-rotate(330deg) opacity(0.85);
@@ -162,6 +179,7 @@
 </head>
 <body class="font-sans antialiased selection:bg-brand-accent selection:text-white">
 
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 transition-all duration-500 bg-brand-pearl/85 backdrop-blur-xl border-b border-brand-taupe/40" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="relative group block" aria-label="Go to top">
@@ -170,21 +188,23 @@
             <div class="hidden md:flex items-center space-x-10">
                 <a href="#philosophy" class="text-sm font-semibold tracking-wide text-brand-dark hover:text-brand-accent transition-colors no-accents">Η ΦΙΛΟΣΟΦΙΑ</a>
                 <a href="#services" class="text-sm font-semibold tracking-wide text-brand-dark hover:text-brand-accent transition-colors no-accents">ΥΠΗΡΕΣΙΕΣ</a>
-                <a href="#roadmap" class="text-sm font-semibold tracking-wide text-brand-dark hover:text-brand-accent transition-colors no-accents">Η ΠΟΡΕΙΑ</a>
+                <a href="#space" class="text-sm font-semibold tracking-wide text-brand-dark hover:text-brand-accent transition-colors no-accents">Ο ΧΩΡΟΣ</a>
                 <a href="#contact" class="px-7 py-3 bg-brand-black text-brand-light rounded-full text-sm font-bold tracking-wide hover:bg-brand-accent hover:-translate-y-0.5 shadow-lg hover:shadow-xl transition-all duration-300 no-accents">ΡΑΝΤΕΒΟΥ</a>
             </div>
             <button class="md:hidden text-brand-dark focus:outline-none" id="mobile-menu-btn">
                 <i data-lucide="menu" class="w-7 h-7"></i>
             </button>
         </div>
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-brand-light shadow-2xl hidden flex-col items-center py-10 space-y-8 border-t border-brand-taupe">
             <a href="#philosophy" class="text-lg font-bold mobile-link no-accents text-brand-dark">Η ΦΙΛΟΣΟΦΙΑ</a>
             <a href="#services" class="text-lg font-bold mobile-link no-accents text-brand-dark">ΥΠΗΡΕΣΙΕΣ</a>
-            <a href="#roadmap" class="text-lg font-bold mobile-link no-accents text-brand-dark">Η ΠΟΡΕΙΑ</a>
+            <a href="#space" class="text-lg font-bold mobile-link no-accents text-brand-dark">Ο ΧΩΡΟΣ</a>
             <a href="#contact" class="px-8 py-4 bg-brand-black text-brand-light rounded-full text-lg font-bold mobile-link no-accents">ΡΑΝΤΕΒΟΥ</a>
         </div>
     </nav>
 
+    <!-- Super Wow Hero Section -->
     <section class="relative min-h-[100vh] flex items-center justify-center pt-24 px-6 overflow-hidden bg-brand-pearl" id="hero">
         
         <div class="absolute inset-0 z-0 pointer-events-none bg-noise"></div>
@@ -256,6 +276,7 @@
         <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-brand-light to-transparent pointer-events-none z-10"></div>
     </section>
 
+    <!-- The Philosopy / About Section -->
     <section id="philosophy" class="py-32 px-6 bg-brand-light relative">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             
@@ -276,16 +297,17 @@
                         Αδειούχος Ψυχολόγος (Αρ. Αδείας: 1138075) με έδρα το ιδιωτικό του γραφείο στο Μαρούσι. Η ακαδημαϊκή του πορεία χαρακτηρίζεται από διεθνή πρότυπα αριστείας, όντας πτυχιούχος Ψυχολογίας με ανώτατη διάκριση (<strong>Cum Laude</strong>) από το Deree - Αμερικανικό Κολλέγιο Ελλάδος, και κάτοχος πτυχίου Ψυχολογίας από το Open University της Μεγάλης Βρετανίας.
                     </p>
                     <p>
-                        Αναζητώντας εργαλεία πέρα από την παραδοσιακή «θεραπεία μέσω συζήτησης», εξειδικεύεται στη Δραματοθεραπεία μέσω μεταπτυχιακών σπουδών στο καταξιωμένο Ψυχοθεραπευτικό και Εκπαιδευτικό Κέντρο <strong>«Το Έρμα»</strong>. 
+                        Αναζητώντας εργαλεία πέρα από την παραδοσιακή «θεραπεία μέσω συζήτησης», <strong class="font-semibold">εξειδικεύεται στη δραματοθεραπεία</strong> στο καταξιωμένο Ψυχοθεραπευτικό και Εκπαιδευτικό Κέντρο «Το Έρμα». 
                     </p>
                 </div>
 
+                <!-- Η Φιλοσοφία Μου Section -->
                 <div class="mt-14 bg-white/60 backdrop-blur-md p-8 md:p-10 rounded-[2rem] shadow-sm border border-brand-taupe/60 relative overflow-hidden group">
                     <div class="absolute top-0 left-0 w-2 h-full bg-brand-accent/60"></div>
-                    <h3 class="text-2xl font-serif text-brand-dark mb-6">Η φιλοσοφία μου</h3>
-                    <div class="space-y-5 text-brand-dark/80 font-light leading-relaxed">
+                    <h3 class="text-2xl font-serif text-brand-dark mb-6">Η Φιλοσοφία μου</h3>
+                    <div class="space-y-5 text-brand-dark/80 font-light leading-relaxed text-[17px]">
                         <p>Υπάρχουν στιγμές που τα λόγια δεν φτάνουν. Που κάτι μέσα μας προσπαθεί να εκφραστεί, αλλά δεν μπορεί να ειπωθεί εύκολα με λέξεις. Εκεί είναι που με ενδιαφέρει να δουλέψουμε μαζί.</p>
-                        <p>Η δραματοθεραπεία για μένα δεν είναι απλώς μια τεχνική — είναι ένας τρόπος να προσεγγίσουμε τον εαυτό μας μέσα από τη δράση, τη φαντασία και το βίωμα. Μέσα από ρόλους, εικόνες, ιστορίες, μικρές «σκηνές», ζωγραφιές, και γενικότερα τις τέχνες δημιουργούμε έναν ασφαλή χώρο όπου μπορείς να δοκιμάσεις, να εκφραστείς και να δεις πλευρές σου που ίσως δεν είχαν βρει μέχρι τώρα φωνή.</p>
+                        <p>Η δραματοθεραπεία για μένα δεν είναι απλώς μια τεχνική — είναι ένας τρόπος να προσεγγίσουμε τον εαυτό μας μέσα από τη δράση, τη φαντασία και το βίωμα. Μέσα από ρόλους, εικόνες, ιστορίες, μικρές «σκηνές», ζωγραφιές, και γενικότερα τις τέχνες, δημιουργούμε έναν ασφαλή χώρο όπου μπορείς να δοκιμάσεις, να εκφραστείς και να δεις πλευρές σου που ίσως δεν είχαν βρει μέχρι τώρα φωνή.</p>
                         <p>Πολλές φορές η κατανόηση δεν έρχεται μόνο με το να μιλάμε για κάτι, αλλά με το να το ζούμε — έστω και συμβολικά. Η δράση έχει έναν τρόπο να ξεκλειδώνει εμπειρίες, συναισθήματα και αλήθειες που τα λόγια δυσκολεύονται να αγγίξουν.</p>
                         <p>Στη δουλειά μου με ενδιαφέρει να συνυπάρξουμε με αυθεντικότητα, χωρίς πίεση για «σωστές» απαντήσεις. Να δώσουμε χώρο στο παιχνίδι, αλλά και στη σοβαρότητα που αυτό μπορεί να κουβαλά. Να βρούμε μαζί τρόπους να συνδεθείς με τον εαυτό σου και τους άλλους με περισσότερη ελευθερία και επίγνωση.</p>
                         <p>Δεν χρειάζεται να έχεις καμία εμπειρία με τις τέχνες. Αρκεί μια διάθεση να εξερευνήσεις.</p>
@@ -297,6 +319,7 @@
         </div>
     </section>
 
+    <!-- Unique Services Section -->
     <section id="services" class="py-32 px-6 bg-brand-pearl relative border-t border-brand-taupe">
         <div class="max-w-7xl mx-auto">
             <div class="mb-20 reveal-premium">
@@ -360,7 +383,7 @@
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
                         <div class="flex items-center gap-8">
                             <span class="text-3xl font-serif font-light text-brand-accent/40 hidden md:block group-hover:text-brand-accent transition-colors">03</span>
-                            <h3 class="text-2xl md:text-4xl font-serif text-brand-dark group-hover:text-brand-accent transition-colors">Ομαδικά Βιωματικά Εργαστήρια</h3>
+                            <h3 class="text-2xl md:text-4xl font-serif text-brand-dark group-hover:text-brand-accent transition-colors">Βιωματικά Εργαστήρια</h3>
                         </div>
                         <div class="flex items-center gap-6">
                             <span class="text-xs font-bold tracking-widest uppercase px-4 py-2 border border-brand-dark/20 bg-brand-light rounded-full text-brand-dark no-accents">ΣΥΝΕΔΡΙΑ 90'</span>
@@ -373,7 +396,7 @@
                         <div class="service-content-inner">
                             <div class="pt-8 md:pl-20 md:pr-40">
                                 <p class="text-brand-dark/80 text-lg leading-relaxed font-light mb-6">
-                                    Αποτελεί μια γνωριμία με τη δραματοθεραπεία μέσω συγκεκριμένου αριθμού συναντήσεων. Η βιωματική ομάδα έχει διάρκεια 3 μήνες (ή 12 συναντήσεις). Η ομάδα λειτουργεί ως ένας μικρόκοσμος της κοινωνίας. Χρησιμοποιούμε τεχνικές για να ενισχύσουμε την αλληλεπίδραση. Τα μέλη αναπτύσσουν ενσυναίσθηση, μοιράζονται εμπειρίες και αντλούν δύναμη από τη συλλογική δυναμική.
+                                    Η βιωματική ομάδα αποτελεί μια ουσιαστική γνωριμία με τη δραματοθεραπεία μέσα από έναν συγκεκριμένο αριθμό συναντήσεων. Έχει συνολική διάρκεια 3 μήνες ή 12 συναντήσεις. Η ομάδα λειτουργεί ως ένας μικρόκοσμος της κοινωνίας. Χρησιμοποιούμε τεχνικές για να ενισχύσουμε την αλληλεπίδραση. Τα μέλη αναπτύσσουν ενσυναίσθηση, μοιράζονται εμπειρίες και αντλούν δύναμη από τη συλλογική δυναμική.
                                 </p>
                                 <span class="text-[10px] font-bold tracking-widest uppercase text-brand-accent no-accents">ΟΜΑΔΙΚΗ ΔΥΝΑΜΙΚΗ</span>
                             </div>
@@ -410,7 +433,56 @@
         </div>
     </section>
 
-    <section id="roadmap" class="py-32 px-6 bg-brand-light relative overflow-hidden">
+    <!-- NEW Image Gallery Section: Ο Χώρος -->
+    <section id="space" class="py-32 px-6 bg-brand-light relative border-t border-brand-taupe">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-20 reveal-premium">
+                <span class="text-brand-accent font-bold tracking-widest text-xs uppercase block mb-4 no-accents">ΠΕΡΙΒΑΛΛΟΝ</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-brand-dark mb-6">Ο Χώρος Μας</h2>
+                <p class="text-brand-dark/70 text-lg font-light leading-relaxed text-balance max-w-2xl mx-auto">
+                    Ένα περιβάλλον σχεδιασμένο για να αποπνέει ηρεμία, ζεστασιά και απόλυτη ιδιωτικότητα. Ένας χώρος όπου η θεραπεία και η τέχνη συνυπάρχουν.
+                </p>
+            </div>
+
+            <!-- Staggered Masonry Grid Layout for 2030 Premium feel -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+                
+                <!-- Column 1 -->
+                <div class="flex flex-col gap-6 lg:gap-8 pt-0 lg:pt-12 reveal-premium">
+                    <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
+                        <img src="https://raw.githubusercontent.com/agelmet/DELIGIANNIS/refs/heads/main/deli1.jpg" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
+                        <img src="https://raw.githubusercontent.com/agelmet/DELIGIANNIS/refs/heads/main/deli2.jpg" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="flex flex-col gap-6 lg:gap-8 reveal-premium delay-100">
+                    <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
+                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli3.jpg?raw=true" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
+                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli4.jpg?raw=true" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="flex flex-col gap-6 lg:gap-8 pt-0 lg:pt-24 reveal-premium delay-200">
+                    <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
+                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli5.jpg?raw=true" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
+                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli6.jpg?raw=true" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Roadmap Section -->
+    <section id="roadmap" class="py-32 px-6 bg-brand-pearl relative overflow-hidden border-t border-brand-taupe">
         <svg class="absolute top-1/2 left-0 w-full h-[600px] -translate-y-1/2 pointer-events-none opacity-40 hidden lg:block" viewBox="0 0 1000 600" preserveAspectRatio="none">
             <path d="M-100,300 C200,100 300,500 500,300 C700,100 800,500 1100,300" fill="none" stroke="#d5cec4" stroke-width="2" stroke-dasharray="12 12"/>
         </svg>
@@ -424,11 +496,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-8 lg:gap-x-24 relative">
                 
                 <div class="reveal-premium md:mt-0 relative group">
-                    <div class="absolute -inset-6 bg-brand-pearl rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 border border-brand-taupe/40 shadow-sm"></div>
+                    <div class="absolute -inset-6 bg-brand-light rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 border border-brand-taupe/40 shadow-sm"></div>
                     <div class="relative z-10 flex flex-col p-6">
                         <span class="text-[8rem] font-serif font-black text-brand-mid leading-none absolute -top-10 -left-6 z-0 pointer-events-none drop-shadow-sm">1</span>
                         <div class="relative z-10 mt-8">
-                            <div class="w-12 h-12 bg-brand-light rounded-full shadow-md flex items-center justify-center mb-6 border border-brand-taupe text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-light transition-colors duration-300">
+                            <div class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center mb-6 border border-brand-taupe text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-light transition-colors duration-300">
                                 <i data-lucide="phone-call" class="w-5 h-5"></i>
                             </div>
                             <h3 class="text-2xl font-serif font-bold text-brand-dark mb-3">Επικοινωνία & Ραντεβού</h3>
@@ -438,11 +510,11 @@
                 </div>
 
                 <div class="reveal-premium delay-100 md:mt-32 relative group">
-                    <div class="absolute -inset-6 bg-brand-pearl rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 border border-brand-taupe/40 shadow-sm"></div>
+                    <div class="absolute -inset-6 bg-brand-light rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 border border-brand-taupe/40 shadow-sm"></div>
                     <div class="relative z-10 flex flex-col p-6">
                         <span class="text-[8rem] font-serif font-black text-brand-mid leading-none absolute -top-10 -left-6 z-0 pointer-events-none drop-shadow-sm">2</span>
                         <div class="relative z-10 mt-8">
-                            <div class="w-12 h-12 bg-brand-light rounded-full shadow-md flex items-center justify-center mb-6 border border-brand-taupe text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-light transition-colors duration-300">
+                            <div class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center mb-6 border border-brand-taupe text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-light transition-colors duration-300">
                                 <i data-lucide="coffee" class="w-5 h-5"></i>
                             </div>
                             <h3 class="text-2xl font-serif font-bold text-brand-dark mb-3">Πρώτη Αξιολόγηση</h3>
@@ -452,11 +524,11 @@
                 </div>
 
                 <div class="reveal-premium delay-200 md:mt-0 relative group">
-                    <div class="absolute -inset-6 bg-brand-pearl rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 border border-brand-taupe/40 shadow-sm"></div>
+                    <div class="absolute -inset-6 bg-brand-light rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 border border-brand-taupe/40 shadow-sm"></div>
                     <div class="relative z-10 flex flex-col p-6">
                         <span class="text-[8rem] font-serif font-black text-brand-mid leading-none absolute -top-10 -left-6 z-0 pointer-events-none drop-shadow-sm">3</span>
                         <div class="relative z-10 mt-8">
-                            <div class="w-12 h-12 bg-brand-light rounded-full shadow-md flex items-center justify-center mb-6 border border-brand-taupe text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-light transition-colors duration-300">
+                            <div class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center mb-6 border border-brand-taupe text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-light transition-colors duration-300">
                                 <i data-lucide="compass" class="w-5 h-5"></i>
                             </div>
                             <h3 class="text-2xl font-serif font-bold text-brand-dark mb-3">Εξατομικευμένο Πλάνο</h3>
@@ -466,11 +538,11 @@
                 </div>
 
                 <div class="reveal-premium delay-300 md:mt-32 relative group">
-                    <div class="absolute -inset-6 bg-brand-pearl rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 border border-brand-taupe/40 shadow-sm"></div>
+                    <div class="absolute -inset-6 bg-brand-light rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0 border border-brand-taupe/40 shadow-sm"></div>
                     <div class="relative z-10 flex flex-col p-6">
                         <span class="text-[8rem] font-serif font-black text-brand-mid leading-none absolute -top-10 -left-6 z-0 pointer-events-none drop-shadow-sm">4</span>
                         <div class="relative z-10 mt-8">
-                            <div class="w-12 h-12 bg-brand-light rounded-full shadow-md flex items-center justify-center mb-6 border border-brand-taupe text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-light transition-colors duration-300">
+                            <div class="w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center mb-6 border border-brand-taupe text-brand-accent group-hover:bg-brand-accent group-hover:text-brand-light transition-colors duration-300">
                                 <i data-lucide="heart" class="w-5 h-5"></i>
                             </div>
                             <h3 class="text-2xl font-serif font-bold text-brand-dark mb-3">Επούλωση & Ανάπτυξη</h3>
@@ -483,10 +555,11 @@
         </div>
     </section>
 
-    <footer id="contact" class="bg-brand-pearl pt-32 pb-12 relative overflow-hidden border-t border-brand-taupe">
+    <!-- Footer / Contact & Map Section -->
+    <footer id="contact" class="bg-brand-light pt-32 pb-12 relative overflow-hidden border-t border-brand-taupe">
         
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="bg-brand-light rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-[0_40px_80px_-20px_rgba(74,67,64,0.1)] mb-20 relative overflow-hidden border border-brand-taupe">
+            <div class="bg-brand-pearl rounded-[3rem] p-8 md:p-12 lg:p-16 shadow-[0_40px_80px_-20px_rgba(74,67,64,0.1)] mb-20 relative overflow-hidden border border-brand-taupe">
                 
                 <div class="grid lg:grid-cols-2 gap-16 items-stretch">
                     
@@ -498,7 +571,7 @@
                             </p>
                         </div>
 
-                        <div class="space-y-8 bg-brand-pearl/80 backdrop-blur-sm p-8 rounded-3xl border border-brand-taupe/60 mb-10 shadow-sm">
+                        <div class="space-y-8 bg-white/60 backdrop-blur-sm p-8 rounded-3xl border border-brand-taupe/60 mb-10 shadow-sm">
                             <div>
                                 <span class="text-[11px] font-bold tracking-[0.2em] uppercase text-brand-accent block mb-2 no-accents">ΔΙΕΥΘΥΝΣΗ</span>
                                 <div class="flex items-center gap-4">
@@ -511,7 +584,8 @@
                                 <span class="text-[11px] font-bold tracking-[0.2em] uppercase text-brand-accent block mb-2 no-accents">ΕΠΙΚΟΙΝΩΝΙΑ</span>
                                 <div class="flex items-center gap-4">
                                     <i data-lucide="phone" class="w-5 h-5 text-brand-dark"></i>
-                                    <a href="tel:2107114392" class="text-brand-dark font-medium text-xl hover:text-brand-accent transition-colors">210 711 4392</a>
+                                    <!-- NUMBER UPDATED HERE -->
+                                    <a href="tel:6988205624" class="text-brand-dark font-medium text-xl hover:text-brand-accent transition-colors">698 820 5624</a>
                                 </div>
                             </div>
                             <div class="w-full h-px bg-brand-taupe"></div>
@@ -535,7 +609,7 @@
                         </a>
                     </div>
 
-                    <a href="https://maps.app.goo.gl/sHPaH9jkuHvb7NrYA" target="_blank" class="relative w-full h-[400px] lg:h-auto rounded-[2rem] overflow-hidden border-[6px] border-brand-light shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] map-container cursor-pointer group block">
+                    <a href="https://maps.app.goo.gl/sHPaH9jkuHvb7NrYA" target="_blank" class="relative w-full h-[400px] lg:h-auto rounded-[2rem] overflow-hidden border-[6px] border-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] map-container cursor-pointer group block">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3142.6685084910266!2d23.8055203!3d38.0506725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a199042b083d29%3A0xcda8d80c356f9662!2sAndrea%20Siggrou%2048%2C%20Marousi%20151%2024!5e0!3m2!1sen!2sgr!4v1711200000000!5m2!1sen!2sgr" 
                             width="100%" 
@@ -547,7 +621,7 @@
                             class="absolute inset-0 w-full h-full object-cover styled-map">
                         </iframe>
                         <div class="absolute inset-0 bg-brand-accent/0 group-hover:bg-brand-accent/20 transition-colors duration-500 flex items-center justify-center pointer-events-none">
-                            <div class="bg-brand-light px-6 py-3 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 flex items-center gap-2 border border-brand-taupe">
+                            <div class="bg-white px-6 py-3 rounded-full shadow-xl opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 flex items-center gap-2 border border-brand-taupe">
                                 <i data-lucide="map" class="w-4 h-4 text-brand-dark"></i>
                                 <span class="text-sm font-bold text-brand-dark no-accents">ΑΝΟΙΓΜΑ ΣΤΟΥΣ ΧΑΡΤΕΣ</span>
                             </div>
@@ -560,7 +634,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center gap-6 border-t border-brand-taupe pt-8">
                 
                 <div class="flex items-center gap-4">
-                    <a href="https://www.instagram.com/texni_kai_therapeia/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand-dark hover:bg-brand-black hover:text-brand-light shadow-sm transition-all duration-300 hover:-translate-y-1 border border-brand-taupe">
+                    <a href="https://www.instagram.com/texni_kai_therapeia/" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-dark hover:bg-brand-black hover:text-white shadow-sm transition-all duration-300 hover:-translate-y-1 border border-brand-taupe">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -568,7 +642,7 @@
                         </svg>
                     </a>
                     
-                    <a href="https://www.linkedin.com/in/georgios-alexandros-deligiannis-5b3101382/?originalSubdomain=gr" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-brand-light flex items-center justify-center text-brand-dark hover:bg-brand-black hover:text-brand-light shadow-sm transition-all duration-300 hover:-translate-y-1 border border-brand-taupe">
+                    <a href="https://www.linkedin.com/in/georgios-alexandros-deligiannis-5b3101382/?originalSubdomain=gr" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-brand-dark hover:bg-brand-black hover:text-white shadow-sm transition-all duration-300 hover:-translate-y-1 border border-brand-taupe">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                             <rect x="2" y="9" width="4" height="12"></rect>
@@ -587,6 +661,7 @@
         </div>
     </footer>
 
+    <!-- Scripts for Interactions -->
     <script>
         lucide.createIcons();
 
