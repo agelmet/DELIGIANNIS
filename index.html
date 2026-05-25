@@ -280,7 +280,8 @@
     <section id="philosophy" class="py-32 px-6 bg-brand-light relative">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 lg:gap-24 items-start">
             
-            <div class="lg:col-span-5 relative reveal-premium sticky top-32">
+            <!-- CHANGED: lg:sticky applies sticky ONLY on desktop so it scrolls normally on mobile -->
+            <div class="lg:col-span-5 relative reveal-premium lg:sticky lg:top-32">
                 <div class="overflow-hidden rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(74,67,64,0.15)] animate-float-premium bg-brand-light p-3 border border-brand-taupe z-10 relative">
                     <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/IMG_9665.jpeg?raw=true" alt="Γιώργος - Αλέξανδρος Δεληγιάννης" class="w-full h-auto rounded-[1.5rem] object-cover object-center aspect-[4/5] transform hover:scale-[1.03] transition-transform duration-1000">
                 </div>
@@ -433,7 +434,7 @@
         </div>
     </section>
 
-    <!-- NEW Image Gallery Section: Ο Χώρος -->
+    <!-- Image Gallery Section: Ο Χώρος -->
     <section id="space" class="py-32 px-6 bg-brand-light relative border-t border-brand-taupe">
         <div class="max-w-7xl mx-auto relative z-10">
             <div class="text-center mb-20 reveal-premium">
@@ -444,36 +445,36 @@
                 </p>
             </div>
 
-            <!-- Staggered Masonry Grid Layout for 2030 Premium feel -->
+            <!-- Staggered Masonry Grid Layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
                 
                 <!-- Column 1 -->
                 <div class="flex flex-col gap-6 lg:gap-8 pt-0 lg:pt-12 reveal-premium">
                     <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
-                        <img src="https://raw.githubusercontent.com/agelmet/DELIGIANNIS/refs/heads/main/deli1.jpg" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                        <img src="https://raw.githubusercontent.com/agelmet/DELIGIANNIS/refs/heads/main/deli1.jpg" alt="Χώρος γραφείου 1" class="w-full h-auto object-cover">
                     </div>
                     <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
-                        <img src="https://raw.githubusercontent.com/agelmet/DELIGIANNIS/refs/heads/main/deli2.jpg" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                        <img src="https://raw.githubusercontent.com/agelmet/DELIGIANNIS/refs/heads/main/deli2.jpg" alt="Χώρος γραφείου 2" class="w-full h-auto object-cover">
                     </div>
                 </div>
 
                 <!-- Column 2 -->
                 <div class="flex flex-col gap-6 lg:gap-8 reveal-premium delay-100">
                     <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
-                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli3.jpg?raw=true" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli3.jpg?raw=true" alt="Χώρος γραφείου 3" class="w-full h-auto object-cover">
                     </div>
                     <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
-                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli4.jpg?raw=true" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli4.jpg?raw=true" alt="Χώρος γραφείου 4" class="w-full h-auto object-cover">
                     </div>
                 </div>
 
                 <!-- Column 3 -->
                 <div class="flex flex-col gap-6 lg:gap-8 pt-0 lg:pt-24 reveal-premium delay-200">
                     <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
-                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli5.jpg?raw=true" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli5.jpg?raw=true" alt="Χώρος γραφείου 5" class="w-full h-auto object-cover">
                     </div>
                     <div class="gallery-img-wrapper shadow-[0_20px_40px_-15px_rgba(74,67,64,0.1)] border border-brand-taupe/50">
-                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli6.jpg?raw=true" alt="Χώρος γραφείου" class="w-full h-auto object-cover">
+                        <img src="https://github.com/agelmet/DELIGIANNIS/blob/main/deli6.jpg?raw=true" alt="Χώρος γραφείου 6" class="w-full h-auto object-cover">
                     </div>
                 </div>
 
@@ -584,7 +585,6 @@
                                 <span class="text-[11px] font-bold tracking-[0.2em] uppercase text-brand-accent block mb-2 no-accents">ΕΠΙΚΟΙΝΩΝΙΑ</span>
                                 <div class="flex items-center gap-4">
                                     <i data-lucide="phone" class="w-5 h-5 text-brand-dark"></i>
-                                    <!-- NUMBER UPDATED HERE -->
                                     <a href="tel:6988205624" class="text-brand-dark font-medium text-xl hover:text-brand-accent transition-colors">698 820 5624</a>
                                 </div>
                             </div>
